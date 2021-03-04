@@ -42,9 +42,9 @@ const Home = () => {
       <h1>show result</h1>
       {todos.map((todo, index) => {
         return (
-          <div>
-            <p key={index}>
-              <strong>Mr. {todo.name}</strong>
+          <div key={index}>
+            <p>
+              <span>{todo.name}</span>
               <span>{todo.details}</span>
             </p>
           </div>

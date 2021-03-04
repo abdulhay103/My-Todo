@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Welcome from "../Layout/Welcome";
 
 const Counter = () => {
   const [count, setCount] = useState(0);
@@ -11,8 +12,16 @@ const Counter = () => {
     }
   };
 
+  //welcome style
+  const style = {
+    color: "red",
+    marginBottom: "25px",
+    fontFamily: "cursive",
+  };
+
   return (
     <div>
+      <Welcome fontStyle={style} />
       <h2>Total Count = {count}</h2>
       <button onClick={increamentHandler}>+</button>
       <button onClick={decrimentHandler}>-</button>

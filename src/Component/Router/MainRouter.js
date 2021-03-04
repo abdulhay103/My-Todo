@@ -1,4 +1,5 @@
 import React from "react";
+import "./css/route.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from "../Todo/Home";
 import Counter from "../Counter/Counter";
@@ -7,6 +8,16 @@ import DevelopersList from "../Todo/DevelopersList";
 import JsPractice from "../JsPractice/JsPractice";
 
 const MainRouter = () => {
+  // const style = {
+  //   nav: {
+  //     display: "flex",
+  //     justifyContent: "flex-start",
+  //     listStyle: "none",
+  //   },
+  //   li: {
+  //     paddingRight: "10px",
+  //   },
+  // };
   return (
     <Router>
       <div>

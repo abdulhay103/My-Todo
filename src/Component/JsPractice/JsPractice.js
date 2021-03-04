@@ -1,6 +1,15 @@
 import React, { useState } from "react";
+import StringMethord from "./StringMethord";
+import Welcome from "../Layout/Welcome";
 
 const JsPractice = () => {
+  // const url = window.location.href;
+  // console.log(url);
+
+  const txtcolor = {
+    color: "red",
+    fontSize: "35px",
+  };
   //1st condition
   const whatDo = (time) => {
     if (time <= 8) {
@@ -65,12 +74,20 @@ const JsPractice = () => {
     }
   };
 
+  const style = {
+    marginBottom: "20px",
+    color: "green",
+    fontFamily: "sans-serif",
+  };
+
   return (
     <div>
+      <Welcome fontStyle={style} />
       <p>1st Statement is... {whatDo(8)}</p>
       <p>2nd Statement is... we will {ourCondition("Bad")}</p>
       <p>3rd condition is...</p>
-      <h3>{result()}</h3>
+      <h3 style={txtcolor}>{result()}</h3>
+      {/* `${getResult === "bus" ? txtcolor : ""}` */}
 
       <form action="" onSubmit={submit}>
         <p>Please chouse one of them "walking, cycle or bus"</p>
@@ -83,6 +100,7 @@ const JsPractice = () => {
         />
         <button type="submit">Submit</button>
       </form>
+      <StringMethord />
     </div>
   );
 };
