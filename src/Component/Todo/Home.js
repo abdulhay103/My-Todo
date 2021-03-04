@@ -11,7 +11,10 @@ const Home = () => {
   const onSubmitHandler = (e) => {
     e.preventDefault();
     setTodos([...todos, { name, details }]);
-    console.log(developer);
+    setDeveloper({
+      name: "",
+      details: "",
+    });
   };
   return (
     <div>
@@ -19,13 +22,16 @@ const Home = () => {
       <form onSubmit={onSubmitHandler}>
         <label htmlFor="name">Developer Nmae: </label>
         <input
+          placeholder="Name"
           type="text"
           value={name}
           onChange={(e) => setDeveloper({ name: e.target.value })}
         />
         <br />
+        <br />
         <label htmlFor="details">Developer Details: </label>
-        <input
+        <textarea
+          placeholder="developer details.."
           type="text"
           value={details}
           onChange={(e) => setDeveloper({ details: e.target.value })}
@@ -33,9 +39,16 @@ const Home = () => {
         <br />
         <button type="submit">Submit</button>
       </form>
+      <h1>show result</h1>
       {todos.map((todo, index) => {
-        // console.log(todo.name);
-        return <h1 key={index}>{todo.name}</h1>;
+        return (
+          <div>
+            <p key={index}>
+              <strong>Mr. {todo.name}</strong>
+              <span>{todo.details}</span>
+            </p>
+          </div>
+        );
       })}
       {/* {console.log(todos)} */}
     </div>
