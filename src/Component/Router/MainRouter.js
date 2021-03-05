@@ -8,21 +8,22 @@ import DevelopersList from "../Todo/DevelopersList";
 import JsPractice from "../JsPractice/JsPractice";
 
 const MainRouter = () => {
-  // const style = {
-  //   nav: {
-  //     display: "flex",
-  //     justifyContent: "flex-start",
-  //     listStyle: "none",
-  //   },
-  //   li: {
-  //     paddingRight: "10px",
-  //   },
-  // };
+  const style = {
+    nav: {
+      display: "flex",
+      justifyContent: "flex-start",
+      listStyle: "none",
+      backgroundColor: "red",
+    },
+    li: {
+      paddingRight: "10px",
+    },
+  };
   return (
     <Router>
       <div>
         <ul>
-          <li>
+          <li style={style.nav} s>
             <Link to="/">Home</Link>
           </li>
           <li>

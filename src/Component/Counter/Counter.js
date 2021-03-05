@@ -7,9 +7,7 @@ const Counter = () => {
     setCount(count + 1);
   };
   const decrimentHandler = () => {
-    {
-      count > 0 && setCount(count - 1);
-    }
+    count > 0 && setCount(count - 1);
   };
 
   //welcome style

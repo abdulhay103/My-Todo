@@ -18,6 +18,15 @@ const JsPractice = () => {
       return <span>We can't get permission to start our work</span>;
     }
   };
+  // const whatDo = (time) => {
+  //   return (
+  //     <span>
+  //       {time <= 8
+  //         ? "We get permission to start our work"
+  //         : " We can't get permission to start our work"}
+  //     </span>
+  //   );
+  // };
 
   //2nd Condition
   //   const practise = ["Good", "Modarate", "Bad"];
@@ -84,7 +93,7 @@ const JsPractice = () => {
     <div>
       <Welcome fontStyle={style} />
       <p>1st Statement is... {whatDo(8)}</p>
-      <p>2nd Statement is... we will {ourCondition("Bad")}</p>
+      <p>2nd Statement is... we will {ourCondition("Good")}</p>
       <p>3rd condition is...</p>
       <h3 style={txtcolor}>{result()}</h3>
       {/* `${getResult === "bus" ? txtcolor : ""}` */}

@@ -11,6 +11,7 @@ const Home = () => {
   const onSubmitHandler = (e) => {
     e.preventDefault();
     setTodos([...todos, { name, details }]);
+    console.log(todos);
     setDeveloper({
       name: "",
       details: "",
@@ -25,7 +26,7 @@ const Home = () => {
           placeholder="Name"
           type="text"
           value={name}
-          onChange={(e) => setDeveloper({ name: e.target.value })}
+          onChange={(e) => setDeveloper({ ...developer, name: e.target.value })}
         />
         <br />
         <br />
@@ -34,7 +35,9 @@ const Home = () => {
           placeholder="developer details.."
           type="text"
           value={details}
-          onChange={(e) => setDeveloper({ details: e.target.value })}
+          onChange={(e) =>
+            setDeveloper({ ...developer, details: e.target.value })
+          }
         />
         <br />
         <button type="submit">Submit</button>
