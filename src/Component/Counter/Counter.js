@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import Welcome from "../Layout/Welcome";
+import Counter2 from "./Counter2";
 
 const Counter = () => {
   const [count, setCount] = useState(0);
@@ -18,12 +19,17 @@ const Counter = () => {
   };
 
   return (
-    <div>
+    <Fragment>
       <Welcome fontStyle={style} />
       <h2>Total Count = {count}</h2>
-      <button onClick={increamentHandler}>+</button>
-      <button onClick={decrimentHandler}>-</button>
-    </div>
+      <button type="button" onClick={increamentHandler}>
+        +
+      </button>
+      <button type="button" onClick={decrimentHandler}>
+        -
+      </button>
+      <Counter2 />
+    </Fragment>
   );
 };
 
