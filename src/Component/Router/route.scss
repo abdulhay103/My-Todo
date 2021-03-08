@@ -1,0 +1,18 @@
+ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+
+  li {
+    padding-right: 10px;
+    a {
+      text-decoration: none;
+      color: #9d261d;
+      font-size: 20px;
+      font-weight: 700;
+      &:hover {
+        border-bottom: 2px solid #9d261d;
+      }
+    }
+  }
+}
